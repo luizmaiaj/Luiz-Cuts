@@ -62,11 +62,6 @@ Return
 ; }
 
 ;===================
-;=   **********    =
-;===================
-;NumpadEnter::Send, Muitomaisdinheiro{!}2019
-
-;===================
 ;=    MINIMIZE     =
 ;===================
 ;Minimizes the window being hovered
