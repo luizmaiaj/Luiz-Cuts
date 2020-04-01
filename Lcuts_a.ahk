@@ -47,7 +47,7 @@ Return
 ;===================
 ;=     ALISTA      =
 ;===================
-;NumpadAdd::Run, "C:\Program Files\internet explorer\iexplore.exe" "https://fr.alista.alstom.hub/webquartz/auth/auth.do?d=1516369576115"
+;NumpadAdd::Run, "C:\Program Files\internet explorer\iexplore.exe" "http://msdn.microsoft.com/en-us/library/aa394372.aspx"
 
 ;===================
 ;=   WINDOW TITLE  =
@@ -119,7 +119,7 @@ Numpad5::KeyHistory
 ;===================
 ;=       AEC       =
 ;===================
-;Numpad6::Run, "C:\Program Files\internet explorer\iexplore.exe" "https://aec.alstom.hub/Advitium/"
+;Numpad6::Run, "C:\Program Files\internet explorer\iexplore.exe" "http://msdn.microsoft.com/en-us/library/aa394372.aspx"
 
 ;Launches Notepad
 ;Numpad7::SwitchStartP("notepad.exe")
@@ -157,7 +157,7 @@ Numpad5::KeyHistory
 ;===================
 ;=   CLEARQUEST    =
 ;===================
-;Numpad9::Run, "C:\Program Files (x86)\Google\Chrome\Application\chrome.exe" "http://clearquest.alstom.hub/cqweb/#/CQat/atvcm/?format=HTML"
+;Numpad9::Run, "C:\Program Files (x86)\Google\Chrome\Application\chrome.exe" "http://msdn.microsoft.com/en-us/library/aa394372.aspx"
 
 ;===================
 ;=    SNIPPING     =

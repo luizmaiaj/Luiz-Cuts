@@ -123,15 +123,16 @@ MenuHandler:
 	}
 	else if A_ThisMenuItem = Jira Board
 	{
-		Run, chrome.exe https://transurbsimulation.atlassian.net/secure/RapidBoard.jspa?rapidView=69&projectKey=LNM
+		Run, chrome.exe http://msdn.microsoft.com/en-us/library/aa394372.aspx
+		
 	}
 	else if A_ThisMenuItem = Jira Filters
 	{
-		Run, chrome.exe https://transurbsimulation.atlassian.net/secure/ManageFilters.jspa?owner=l.maia&page=1&selectedGroup=anything&selectedProject=anything&sortKey=name&sortOrder=ASC
+		Run, chrome.exe http://msdn.microsoft.com/en-us/library/aa394372.aspx
 	}
 	else if A_ThisMenuItem = Confluence NR
 	{
-		Run, chrome.exe https://transurbsimulation.atlassian.net/wiki/spaces/L091NE/overview
+		Run, chrome.exe http://msdn.microsoft.com/en-us/library/aa394372.aspx
 	}
 	else if A_ThisMenuItem = 5 minutes
 	{
