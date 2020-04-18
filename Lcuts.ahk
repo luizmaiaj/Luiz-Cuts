@@ -87,7 +87,7 @@ getApp(vTitle)
 		Return "Screen Off;Free;Private"
 
 	; List the key-value pairs of an object
-	vApps := Object("Firefox","Firefox;Busy;Private","Microsoft Visual Studio","Visual Studio;Busy;Internal","Visual Basic for Applications","VBA;Busy;Internal","Outlook","Outlook;Busy;Important","calendar","Outlook;Busy;Important","meeting","Outlook;Busy;Important","message","Outlook;Busy;Important","Notepad","Notepad;Busy;Internal","Excel","Excel;Busy;Important","Word","Word;Busy;Important","PowerPoint","PowerPoint;Busy;Important","Salamander","Salamander;Busy;Internal","Lock Screen","Lock Screen;Free;Private","Adobe","Adobe PDF;Busy;Important","Skype","Skype;Busy;Important","Slack","Slack;Busy;Internal","Autohotkey","Autohotkey;Busy;Private","OneNote","OneNote;Busy;Important")
+	vApps := Object("Firefox","Firefox;Busy;Private","Microsoft Visual Studio","Visual Studio;Busy;Internal","Visual Basic for Applications","VBA;Busy;Internal","Outlook","Outlook;Busy;Important","calendar","Outlook;Busy;Important","meeting","Outlook;Busy;Important","message","Outlook;Busy;Important","Notepad","Notepad;Busy;Internal","Excel","Excel;Busy;Important","Word","Word;Busy;Important","PowerPoint","PowerPoint;Busy;Important","Salamander","Salamander;Busy;Internal","Lock Screen","Lock Screen;Free;Private","Adobe","Adobe PDF;Busy;Important","Skype","Skype;Busy;Important","Slack","Slack;Busy;Internal","Autohotkey","Autohotkey;Busy;Private","OneNote","OneNote;Busy;Important","Unity","Unity;Busy;Private")
 
 
 	; The above expression could be used directly in place of "colours" below:
