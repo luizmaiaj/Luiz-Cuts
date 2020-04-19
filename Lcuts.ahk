@@ -1,6 +1,7 @@
 ﻿#NoEnv  ; Recommended for performance and compatibility with future AutoHotkey releases.
 #InstallKeybdHook ; to detect pressed keys
 #InstallMouseHook ; to detect clicks
+#SingleInstance Force ; to replace current instance without message box
 ; #Warn  ; Enable warnings to assist with detecting common errors.
 SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
 SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
@@ -87,8 +88,29 @@ getApp(vTitle)
 		Return "Screen Off;Free;Private"
 
 	; List the key-value pairs of an object
-	vApps := Object("Firefox","Firefox;Busy;Private","Microsoft Visual Studio","Visual Studio;Busy;Internal","Visual Basic for Applications","VBA;Busy;Internal","Outlook","Outlook;Busy;Important","calendar","Outlook;Busy;Important","meeting","Outlook;Busy;Important","message","Outlook;Busy;Important","Notepad","Notepad;Busy;Internal","Excel","Excel;Busy;Important","Word","Word;Busy;Important","PowerPoint","PowerPoint;Busy;Important","Salamander","Salamander;Busy;Internal","Lock Screen","Lock Screen;Free;Private","Adobe","Adobe PDF;Busy;Important","Skype","Skype;Busy;Important","Slack","Slack;Busy;Internal","Autohotkey","Autohotkey;Busy;Private","OneNote","OneNote;Busy;Important","Unity","Unity;Busy;Private")
-
+	vApps := Object("LinkedIn","LinkedIn;Busy;Private"
+	,"Netflix","Netflix;Busy;Private"
+	,"Unity","Unity;Busy;Private"
+	,"GitHub","GitHub;Busy;Private"
+	,"Firefox","Firefox;Busy;Private"
+	,"Visual Studio Code","VS Code;Busy;Internal"
+	,"Microsoft Visual Studio","Visual Studio;Busy;Internal"
+	,"Visual Basic for Applications","VBA;Busy;Internal"
+	,"Outlook","Outlook;Busy;Important"
+	,"calendar","Outlook;Busy;Important"
+	,"meeting","Outlook;Busy;Important"
+	,"message","Outlook;Busy;Important"
+	,"Notepad","Notepad;Busy;Internal"
+	,"Excel","Excel;Busy;Important"
+	,"Word","Word;Busy;Important"
+	,"PowerPoint","PowerPoint;Busy;Important"
+	,"Salamander","Salamander;Busy;Internal"
+	,"Lock Screen","Lock Screen;Free;Private"
+	,"Adobe","Adobe PDF;Busy;Important"
+	,"Skype","Skype;Busy;Important"
+	,"Slack","Slack;Busy;Internal"
+	,"Autohotkey","Autohotkey;Busy;Private"
+	,"OneNote","OneNote;Busy;Important")
 
 	; The above expression could be used directly in place of "colours" below:
 	for k, v in vApps
