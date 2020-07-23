@@ -69,7 +69,7 @@ class Ant
 		vPeriod := this.period
 		vPeriod := vPeriod / 60000
 		
-		vApp := getApp(vTitle)
+		vApp := MakeOneLine(getApp(vTitle))
 		
 		vFilename = C:\Users\l.maia\Documents\%vDateFileName%_usage_log.csv
 		
@@ -110,7 +110,9 @@ getApp(vTitle)
 	,"Skype","Skype;Busy;Important"
 	,"Slack","Slack;Busy;Internal"
 	,"Autohotkey","Autohotkey;Busy;Private"
-	,"OneNote","OneNote;Busy;Important")
+	,"OneNote","OneNote;Busy;Important"
+	,"PowerApps","PowerApps;Busy;Important"
+	,"Power Apps","PowerApps;Busy;Important")
 
 	; The above expression could be used directly in place of "colours" below:
 	for k, v in vApps
@@ -122,4 +124,9 @@ getApp(vTitle)
 	}
 
 	Return "Other;Busy;Internal"
+}
+
+MakeOneLine(x)
+{
+	Return RegExReplace(x, "\R", "")
 }
