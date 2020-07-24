@@ -25,6 +25,20 @@ Appskey & m::SwitchMouseSensitivity() ;Control + middle mouse button: switch mou
 
 ;=    SHORTCUTS    =
 
+AppsKey & h::
+{
+	sShortcuts =
+(
+F: search; T: translate;
+C: calculator; M: mouse sensitivity;
+F12: lock and switch off screen.
+)
+	
+	Traytip, LCuts, %sShortcuts%, 0.5, 1
+
+	Return
+}
+
 ; searches selected text on the internet
 Appskey & f::
 {
@@ -157,7 +171,7 @@ SwitchMouseSensitivity()
 
 	DllCall("SystemParametersInfo", Int,113, Int,0, UInt,iSensitivity, Int,2)
 	
-	Traytip, Mouse, Sensitivity set to %sSensitivity%, 0.5, 1
+	Traytip, LCuts, Sensitivity set to %sSensitivity%, 0.5, 1
 }
 
 SwitchStartP(sProgramToStart, bWait:=False)
