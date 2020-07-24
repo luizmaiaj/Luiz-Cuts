@@ -15,12 +15,13 @@ SetNumlockState, AlwaysOn
 ;SetCapsLockState, AlwaysOff
 SetScrollLockState, AlwaysOff
 
-;oReminder := new Ant( 30000 ) ;time is in milliseconds
-oReminder := new Ant( 6000 ) ;for testing
+oReminder := new Ant( 6000 ) ;time is in milliseconds for each capture to file
 
 Return
 
-MButton::#Tab
+MButton::#Tab ;middle mouse button to browse desktops
+
+Appskey & m::SwitchMouseSensitivity() ;Control + middle mouse button: switch mouse sensitivity
 
 ;=    SHORTCUTS    =
 
@@ -29,7 +30,7 @@ Appskey & f::
 {
 	Send, ^c
 	Clipwait
-	Run, "C:\Program Files\Mozilla Firefox\Firefox.exe" https://duckduckgo.com/?q="%clipboard%"
+	Run, "C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe" https://duckduckgo.com/?q="%clipboard%"
 	Return
 }
 
@@ -38,12 +39,14 @@ Appskey & t::
 {
 	Send, ^c
 	Clipwait
-	Run, "C:\Program Files\Mozilla Firefox\Firefox.exe" https://translate.google.com/#auto/en/"%clipboard%"
+	Run, "C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe" https://translate.google.com/#auto/en/"%clipboard%"
 	return
 }
 
+Appskey & c::SwitchStartP("calc.exe")
+
 ;lock pc and switch off monitor
-F12::SendMessage, 0x112, 0xF170, 2,, Program Manager
+AppsKey & F12::SendMessage, 0x112, 0xF170, 2,, Program Manager
 
 ;=     CLASSES     =
 class Ant
@@ -129,4 +132,53 @@ getApp(vTitle)
 MakeOneLine(x)
 {
 	Return RegExReplace(x, "\R", "")
+}
+
+SwitchMouseSensitivity()
+{
+	static iSensitivity := 20
+	sSensitivity = low
+	
+	if(iSensitivity = 20)
+	{
+		iSensitivity = 3
+		sSensitivity = low
+	}
+	else if(iSensitivity = 3)
+	{
+		iSensitivity = 10
+		sSensitivity = medium
+	}
+	else
+	{
+		iSensitivity = 20
+		sSensitivity = high
+	}
+
+	DllCall("SystemParametersInfo", Int,113, Int,0, UInt,iSensitivity, Int,2)
+	
+	Traytip, Mouse, Sensitivity set to %sSensitivity%, 0.5, 1
+}
+
+SwitchStartP(sProgramToStart, bWait:=False)
+{
+	sSearchWindow := "ahk_exe " . sProgramToStart
+	SwitchStartPW(sProgramToStart, sSearchWindow, bWait)
+}
+
+SwitchStartPW(sProgramToStart, sSearchWindow, bWait:=False)
+{
+	if WinExist(sSearchWindow)
+	{
+		WinActivate, %sSearchWindow%
+		;Traytip, Window, Switched to %sProgramToStart%, 0.5, 1
+	}
+	else
+	{
+		Run, %sProgramToStart%
+		;Traytip, Window, Launched %sProgramToStart%, 0.5, 1
+	}
+	
+	if(bWait = True)
+		WinWaitActive, %sSearchWindow%
 }
