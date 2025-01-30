@@ -1,0 +1,79 @@
+<!-- Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT License. -->
+<!-- This file shows how to design a first-run page that provides a welcome screen to the user about the features of the add-in. -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Contoso Task Pane Add-in</title>
+
+    <!-- Office JavaScript API -->
+    <script type="text/javascript" src="https://appsforoffice.microsoft.com/lib/1.1/hosted/office.js"></script>
+
+    <!-- For more information on Fluent UI, visit https://developer.microsoft.com/fluentui#/. -->
+    <link rel="stylesheet" href="https://static2.sharepointonline.com/files/fabric/office-ui-fabric-core/9.6.1/css/fabric.min.css"/>
+
+    <!-- Template styles -->
+    <link href="taskpane.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body class="ms-font-m ms-welcome ms-Fabric">
+    <header class="ms-welcome__header ms-bgColor-neutralLighter">
+        <img width="90" height="90" src="../../assets/logo-filled.png" alt="LCutW" title="LCutW" />
+        <h1 class="ms-font-su">LCutW!</h1>
+    </header>
+    <section id="sideload-msg" class="ms-welcome__main">
+        <h2 class="ms-font-xl">Please sideload your add-in to see app body.</h2>
+    </section>
+    <main id="app-body" class="ms-welcome__main" style="display: none;">
+               
+        <!-- buttons from the tutorial
+        <h2 class="ms-font-xl"> LCutW! </h2>
+        
+        <button class="ms-Button" id="insert-paragraph">Insert Paragraph</button><br/><br/>
+
+        <button class="ms-Button" id="apply-style">Apply Style</button><br/><br/>
+
+        <button class="ms-Button" id="apply-custom-style">Apply Custom Style</button><br/><br/>
+
+        <button class="ms-Button" id="change-font">Change Font</button><br/><br/>
+
+        <button class="ms-Button" id="insert-text-into-range">Insert Abbreviation</button><br/><br/>
+
+        <button class="ms-Button" id="insert-text-outside-range">Add Version Info</button><br/><br/>
+
+        <button class="ms-Button" id="replace-text">Change Quantity Term</button><br/><br/>
+        -->
+
+        <button class="ms-Button" id="highlight-text">Highlight text</button><br/>
+
+        <button class="ms-Button" id="format-wit">Format WIT</button><br/>
+
+        <button class="ms-Button" id="format-tickets">Format Tickets in Selection</button><br/>
+
+        <button class="ms-Button" id="format-numbers">Format Numbers to Tickets in Selection</button><br/>
+        
+        <!-- the table formatting below could be useful in the future as a code template
+        <ul class="ms-List ms-welcome__features">
+            <li class="ms-ListItem">
+                <i class="ms-Icon ms-Icon--Ribbon ms-font-xl"></i>
+                <span class="ms-font-m">Achieve more with Office integration</span>
+            </li>
+            <li class="ms-ListItem">
+                <i class="ms-Icon ms-Icon--Unlock ms-font-xl"></i>
+                <span class="ms-font-m">Unlock features and functionality</span>
+            </li>
+            <li class="ms-ListItem">
+                <i class="ms-Icon ms-Icon--Design ms-font-xl"></i>
+                <span class="ms-font-m">Create and visualize like a pro</span>
+            </li>
+        </ul>
+        -->
+        
+    </main>
+</body>
+
+</html>
